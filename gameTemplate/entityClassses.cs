@@ -118,10 +118,10 @@ public class BlackMarketGuardProxy : IMerchant
     private IMerchant trader;
     private Player player;
 
-    public Weapon WeaponItem { get; }
-    public int WeaponPrice { get; }
-    public int RepairKitPrice { get; }
-    public int BuffPrice { get; }
+    public Weapon WeaponItem => trader.WeaponItem;
+    public int WeaponPrice => trader.WeaponPrice;
+    public int RepairKitPrice => trader.RepairKitPrice;
+    public int BuffPrice => trader.BuffPrice;
 
     public BlackMarketGuardProxy(IMerchant realTrader, Player realPlayer)
     {
@@ -146,7 +146,7 @@ public class BlackMarketGuardProxy : IMerchant
     {
         if (choice == 4)
         {
-            return "You are leaving";
+            return "You've been kicked out";
         }
 
         return trader.GetActionMessage(choice);

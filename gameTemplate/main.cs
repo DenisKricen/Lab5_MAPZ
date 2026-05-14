@@ -33,8 +33,6 @@ public class Program
             }
 
             // Black merchant encounter
-
-
             IMerchant blackMarketTrader = sectorFactory.CreateMerchant();
 
             // Proxy usage: check player's wealth before allow to buy stuff
